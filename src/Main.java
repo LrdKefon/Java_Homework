@@ -56,20 +56,84 @@
 //}
 //Task 2
 
+//public class Main {
+//    public static void main(String[] args) {
+//        int balance = 200; // баланс
+//        int amount = 1730;        // сумма пополнения
+//        int account = amount + balance;
+//        int bonus;
+//        if (amount >= 1000) {
+//            bonus = amount / 100;
+//        } else {
+//            bonus = 0;
+//        }
+//        int total_bonus = bonus;
+//        System.out.println("Your balance: " + account + " rubles");
+//        System.out.println("You've received: " + total_bonus + " bonus.");
+//
+//    }
+//}
+
+// ЛЕКЦИЯ 3, работа на занятие.
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int a = 5;
+//        int b = 3;
+//
+//        int result;
+//        if (a > b) {              // типо ниже тоже самое но только круче
+//            result = a;
+//        }else {
+//                result = b;
+//        }
+//        System.out.println("Max: " + result);
+//    }
+//}
+
+// типо круче
+//public class Main {
+//    public static void main(String[] args) {
+//        CalcService service = new CalcService();
+////        int x = 5;  // я их могу передать в скобки ниже
+////        int y = 3;
+////        int myMax = service.max(5, 6);
+////        System.out.println(myMax);
+//        System.out.println();
+//        System.out.println("5 / 6");
+//        System.out.println(service.max(5, 6));
+//
+//        System.out.println();
+//        System.out.println(("10 / 10"));
+//        System.out.println(service.max(10, 10));
+//
+//        System.out.println();
+//        System.out.println("-20 / -10");
+//        System.out.println(service.max(-10, -20));
+//
+//    }
+//}
+
+// 2 решения, требуемое и мое, Задача 1.
+//public class Main {
+//    public static void main(String[] args) {
+//        System.out.println("Hello world!");
+//
+//
+//        BonusMilesService service = new BonusMilesService();
+//        System.out.println();
+//        System.out.println(service.calculate(15000));
+//
+//        System.out.println();
+//        System.out.println(service.calculate(20_000));
+//    }
+//}
+// Their solution
 public class Main {
     public static void main(String[] args) {
-        int balance = 200; // баланс
-        int amount = 1730;        // сумма пополнения
-        int account = amount + balance;
-        int bonus;
-        if (amount >= 1000) {
-            bonus = amount / 100;
-        } else {
-            bonus = 0;
-        }
-        int total_bonus = bonus;
-        System.out.println("Your balance: " + account + " rubles");
-        System.out.println("You've received: " + total_bonus + " bonus.");
-
+        BonusMilesService service = new BonusMilesService();
+        int price = 10_000;
+        int miles = service.calculate(price); // должно получиться 500
+        System.out.println(miles);
     }
 }
